@@ -26,7 +26,7 @@ function RegisterPage() {
         return;
       }
 
-      const response = await axios.post('http://localhost:8080/api/auth/register', { name, email, password });
+      const response = await axios.post('https://for-work-7e4bde187a7b.herokuapp.com/api/auth/register', { name, email, password });
       console.log(response)
       setSuccessMessage('Registration successful! You can now log in.');
       setTimeout(() => {

@@ -17,7 +17,7 @@ function LoginPage() {
     }
 
     try {
-      const response = await axios.post('http://localhost:8080/api/auth/login', { email, password });
+      const response = await axios.post('https://for-work-7e4bde187a7b.herokuapp.com/api/auth/login', { email, password });
       localStorage.setItem('token', response.data.token);
       setSuccessMessage('Login successful! Redirecting...');
       setTimeout(() => {
