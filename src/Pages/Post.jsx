@@ -179,16 +179,21 @@ function PostPage() {
                                                     style={{
                                                         borderRadius: '8px',
                                                         objectFit: 'cover',
-                                                        maxHeight: '250px', 
-                                                        maxWidth:'300px',
+                                                        maxHeight: '250px',
+                                                        maxWidth: '300px',
                                                         width: '100%',
                                                         cursor: 'pointer',
                                                     }}
                                                     onClick={() => handleImageClick(`https://for-work-7e4bde187a7b.herokuapp.com${mediaItem.fileUrl}`)}
                                                 />
                                             ) : mediaItem.type && mediaItem.type.startsWith('video') ? (
-                                                <video width="100%" height="auto" controls style={{ borderRadius: '8px' }}>
-                                                    <source src={mediaItem.fileUrl} type="video/mp4" />
+                                                <video width="100%" height="auto" controls style={{
+                                                    objectFit: 'cover',
+                                                    maxHeight: '250px',
+                                                    maxWidth: '300px',
+                                                    width: '100%',
+                                                }}>
+                                                    <source src={`https://for-work-7e4bde187a7b.herokuapp.com${mediaItem.fileUrl}`} type="video/mp4" />
                                                     Your browser does not support the video tag.
                                                 </video>
                                             ) : null}
@@ -275,7 +280,7 @@ function PostPage() {
                         style={{
                             width: '100%',
                             height: '70vh',
-                            objectFit:'cover',
+                            objectFit: 'cover',
                             borderRadius: '8px',
                         }}
                     />
@@ -294,7 +299,7 @@ function PostPage() {
                         position: 'fixed',
                         bottom: 16,
                         right: 16,
-                        height:'60px',
+                        height: '60px',
                         backgroundColor: 'primary.main',
                         borderRadius: '50%',
                         boxShadow: 3,
