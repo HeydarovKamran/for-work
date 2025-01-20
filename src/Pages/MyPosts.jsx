@@ -239,7 +239,7 @@ const MyPosts = () => {
                                                         />
                                                     ) : mediaItem.type && mediaItem.type.startsWith('video') ? (
                                                         <video width="100%" controls>
-                                                            <source src={mediaItem.fileUrl} type="video/mp4" />
+                                                            <source src={`https://for-work-7e4bde187a7b.herokuapp.com${mediaItem.fileUrl}`} type="video/mp4" />
                                                         </video>
                                                     ) : null}
                                                 </Box>
