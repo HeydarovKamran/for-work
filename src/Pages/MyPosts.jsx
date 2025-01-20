@@ -249,11 +249,14 @@ const MyPosts = () => {
                                     <Box mt={2} display="flex" justifyContent="space-between" alignItems="center">
                                         <Avatar>{post.authorName[0]}</Avatar>
                                         <Box>
-                                            <Typography variant="body2" color="textSecondary">
+                                            <Typography variant="body2" sx={{ color: '#888', textAlign: 'right' }}> {/* Выравнивание текста вправо */}
                                                 {new Date(post.createdAt).toLocaleDateString('ru-RU', {
                                                     year: 'numeric',
                                                     month: 'long',
                                                     day: 'numeric',
+                                                })} в {new Date(post.createdAt).toLocaleTimeString('ru-RU', {
+                                                    hour: '2-digit',
+                                                    minute: '2-digit',
                                                 })}
                                             </Typography>
                                             <Box mt={1}>
